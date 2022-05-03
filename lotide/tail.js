@@ -1,11 +1,13 @@
-let tail = function(answer) {
-  let b = [];
-  b += answer.tail;
-  return b;
+const tail = function(array) {
+  console.log(array.slice(1));
 };
+
 const assertEqual = function(actual, expected) {
   console.assert(actual === expected);
 };
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result, ["Lighthouse", "Labs"]);
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+const first = ["hello"];
+tail(words);
+tail(first);
+assertEqual(words.length, 3);
