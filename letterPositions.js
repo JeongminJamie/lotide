@@ -12,13 +12,17 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-const assertArraysEqual = function(one, two) {
-  if (one === two) {
-    console.log(true);
+const assertArraysEqual = function(array3, array4) {
+  let result2 = eqArrays(array3,array4);
+  if (result === true) {
+    console.log(`❤️❤️❤️: ${array3} and ${array4} are equal ❤️❤️❤️`);
+    return result2;
   } else {
-    console.log(false);
+    console.log(`😭😭😭 ${array3} and ${array4} are not equal 😭😭😭`);
+    return result2;
   }
 };
+
 
 console.log(letterPositions("lighthouse in the house"));
 console.log(letterPositions("hello"));
