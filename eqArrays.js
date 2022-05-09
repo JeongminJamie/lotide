@@ -23,7 +23,15 @@ eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
 eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
 
 const assertEqual = function(actual, expected) {
-  console.assert(actual === expected);
+  let result = "";
+  if (actual === expected) {
+    result += "❤️" + "Assertion passed: " + actual + " === " + expected;
+    console.log(result);
+  } else {
+    result += "😭" + "Assertion Failed: " + actual + " !== " + expected;
+    console.log(result);
+  }
+  return result;
 };
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
