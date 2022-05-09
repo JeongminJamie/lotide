@@ -1,13 +1,13 @@
+var emoji = require("node-emoji");
+const heart = emoji.get("heart");
+const sad = emoji.get("x");
+
 const assertEqual = function(actual, expected) {
-  let result = "";
   if (actual === expected) {
-    result += "❤️" + "Assertion passed: " + actual + " === " + expected;
-    console.log(result);
+    console.log(heart + heart + heart + "Assertion passed: " + actual + " === " + expected);
   } else {
-    result += "😭" + "Assertion Failed: " + actual + " !== " + expected;
-    console.log(result);
+    console.log(sad + sad + sad + "Assertion Failed: " + actual + " !== " + expected);
   }
-  return result;
 };
 
 assertEqual("Lighthouse Labs", "Bootcamp");
