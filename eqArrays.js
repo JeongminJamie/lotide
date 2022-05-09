@@ -1,4 +1,4 @@
-const eqArrays = function(array1, array2) {
+const eqArrays = function (array1, array2) {
   let result;
   if (array1.length !== array2.length) {
     result = false;
@@ -16,25 +16,5 @@ const eqArrays = function(array1, array2) {
   }
 };
 
-eqArrays([1, 2, 3], [1, 2, 3]) // => true
-eqArrays([1, 2, 3], [3, 2, 1]) // => false
-
-eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
-
-const assertEqual = function(actual, expected) {
-  let result = "";
-  if (actual === expected) {
-    result += "❤️" + "Assertion passed: " + actual + " === " + expected;
-    console.log(result);
-  } else {
-    result += "😭" + "Assertion Failed: " + actual + " !== " + expected;
-    console.log(result);
-  }
-  return result;
-};
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays([2, 3, 7], [4, 7, 8]), true); 
-assertEqual(eqArrays([7, 17, 27], [7, 17, 27]), true);
+module.exports = eqArrays;
 
