@@ -4,12 +4,15 @@ const head = function(array) {
 
 
 const assertEqual = function(actual, expected) {
-  actual = head;
-  if (actual[0] === expected) {
-    console.log(expected);
-  } else if (actual[0] === []) {
-    console.log("undefined");
+  let result = "";
+  if (actual === expected) {
+    result += "❤️" + "Assertion passed: " + actual + " === " + expected;
+    console.log(result);
+  } else {
+    result += "😭" + "Assertion Failed: " + actual + " !== " + expected;
+    console.log(result);
   }
+  return result;
 };
 
 assertEqual(head([5,6,7]), 5);
