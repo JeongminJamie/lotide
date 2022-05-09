@@ -16,16 +16,17 @@ const eqArrays = function(array1, array2) {
   }
 };
 
-  const assertArraysEqual = function(array1, array2) {
-    let result = eqArrays(array1,array2);
-    if (result === true) {
-      console.log(`Yes! ${array1} and ${array2} are equal!`);
-      return result;
-    } else {
-      console.log(`Unfortunately, ${array1} and ${array2} are not equal!`);
-      return result;
-    }
-  };
+const assertArraysEqual = function(array3, array4) {
+  let result2 = eqArrays(array3,array4);
+  if (result === true) {
+    console.log(`❤️❤️❤️: ${array3} and ${array4} are equal ❤️❤️❤️`);
+    return result2;
+  } else {
+    console.log(`😭😭😭 ${array3} and ${array4} are not equal 😭😭😭`);
+    return result2;
+  }
+};
+
 
 const map = function(array, callback) {
   const results = [];
@@ -35,7 +36,7 @@ const map = function(array, callback) {
   return results;
 }
 
-const array1 = ["finch", "north york", "sheppard"];
+const array5 = ["finch", "north york", "sheppard"];
 
 let first = function(some) {
   if (some === "finch") {
@@ -46,5 +47,5 @@ let first = function(some) {
 };
 
 
-assertArraysEqual(map(array1, first), [true, false, false]);
+assertArraysEqual(map(array5, first), [true, false, false]);
 
