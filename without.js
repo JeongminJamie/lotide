@@ -16,13 +16,17 @@ const eqArrays = function(array1, array2) {
   }
 };
 
-const assertArraysEqual = function(one, two) {
-  if (one === two) {
-    console.log(true);
+const assertArraysEqual = function(array3, array4) {
+  let result2 = eqArrays(array3,array4);
+  if (result === true) {
+    console.log(`❤️❤️❤️: ${array3} and ${array4} are equal ❤️❤️❤️`);
+    return result2;
   } else {
-    console.log(false);
+    console.log(`😭😭😭 ${array3} and ${array4} are not equal 😭😭😭`);
+    return result2;
   }
 };
+
 
 const without = function (before, after) { 
   for (let i = 0; i < before.length; i++) {
