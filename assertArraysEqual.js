@@ -16,16 +16,17 @@ const eqArrays = function(array1, array2) {
   }
 };
 
-const assertArraysEqual = function(array1, array2) {
-  let result = eqArrays(array1,array2);
+const assertArraysEqual = function(array3, array4) {
+  let result2 = eqArrays(array3,array4);
   if (result === true) {
-    console.log(`Yes! ${array1} and ${array2} are equal!`);
-    return result;
+    console.log(`❤️❤️❤️: ${array3} and ${array4} are equal ❤️❤️❤️`);
+    return result2;
   } else {
-    console.log(`Unfortunately, ${array1} and ${array2} are not equal!`);
-    return result;
+    console.log(`😭😭😭 ${array3} and ${array4} are not equal 😭😭😭`);
+    return result2;
   }
 };
+
 
 assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); 
 assertArraysEqual(eqArrays([2, 3, 7], [4, 7, 8]), true); 
