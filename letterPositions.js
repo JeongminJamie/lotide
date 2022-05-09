@@ -14,7 +14,7 @@ const letterPositions = function(sentence) {
 
 const assertArraysEqual = function(array3, array4) {
   let result2 = eqArrays(array3,array4);
-  if (result === true) {
+  if (result2 === true) {
     console.log(`❤️❤️❤️: ${array3} and ${array4} are equal ❤️❤️❤️`);
     return result2;
   } else {
