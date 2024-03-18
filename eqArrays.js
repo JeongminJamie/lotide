@@ -1,3 +1,5 @@
+const assert = require("./assertEqual");
+
 const eqArrays = function (obj1, obj2) {
   if (obj1.length !== obj2.length) {
     return false;
@@ -13,5 +15,10 @@ const eqArrays = function (obj1, obj2) {
     }
   }
 };
+
+console.log(eqArrays(["1", "2", "3"], ["1", "2", 3]));
+
+const assertEqual = assert.assertEqual;
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
 
 module.exports = eqArrays;
