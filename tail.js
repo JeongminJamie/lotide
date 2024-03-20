@@ -1,4 +1,4 @@
-const assertEqualObj = require("./assertEqual");
+const { assertEqual } = require("./assertEqual");
 
 const tail = function (array) {
   if (array.length <= 1) {
@@ -6,8 +6,6 @@ const tail = function (array) {
   }
   return array.slice(1);
 };
-
-const assertEqual = assertEqualObj.assertEqual;
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 
